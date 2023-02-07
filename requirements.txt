@@ -1,1 +1,2 @@
 google-cloud-storage==2.7.0
+minio==7.1.13

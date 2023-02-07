@@ -22,7 +22,7 @@ class GoogleClient:
 
     def upload_folder(self, source: str, destination: str):
         for file in os.listdir(source):
-            source_file = f"{source}/{file}"
+            source_file = os.path.join(source, file)
             destination_file = f"{destination}/{file}"
             blob = self.bucket.blob(destination_file)
             blob.upload_from_filename(source_file)
